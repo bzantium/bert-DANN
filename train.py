@@ -56,7 +56,7 @@ def train(args, encoder, cls_classifier, dom_classifier,
             label_concat = torch.cat((label_src, label_tgt), 0).long()
             loss_cls = CELoss(src_preds, src_labels)
             loss_dom = CELoss(dom_preds, label_concat)
-            loss = loss_cls + args.beta * loss_dom
+            loss = loss_cls + loss_dom
 
             # optimize source classifier
             loss.backward()

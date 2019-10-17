@@ -51,9 +51,6 @@ def parse_arguments():
     parser.add_argument('--alpha', type=float, default=1e-3,
                         help="Specify domain weight")
 
-    parser.add_argument('--beta', type=float, default=1.0,
-                        help="Specify domain weight")
-
     parser.add_argument('--num_epochs', type=int, default=3,
                         help="Specify the number of epochs for adaptation")
 
@@ -77,7 +74,6 @@ def main():
     print("src: " + args.src)
     print("tgt: " + args.tgt)
     print("alpha: " + str(args.alpha))
-    print("beta: " + str(args.beta))
     print("seed: " + str(args.seed))
     print("train_seed: " + str(args.train_seed))
     print("model_type: " + str(args.model))
